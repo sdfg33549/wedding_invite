@@ -28,22 +28,24 @@ body {
   width: 60%;
   min-width: 534px;
   text-align: center;
-  border-radius: 15px;
-  overflow: hidden; }
+  border-radius: 15px; }
   #invite_card img {
     height: 100%; }
+  #invite_card .img_card {
+    max-width: 453px;
+    border-radius: 15px; }
   #invite_card .main_text {
     position: absolute;
     left: 50%;
-    top: 39%;
-    transform: translate(-50%, -50%);
-    width: 430px;
+    top: 88px;
+    transform: translateX(-50%);
+    width: 450px;
     height: auto; }
   #invite_card .name {
     position: absolute;
     left: 50%;
-    top: 83.6%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-50%, 540%);
     width: 265px;
     height: auto; }
 
@@ -54,9 +56,9 @@ body {
 .pic_box {
   width: 520px;
   position: absolute;
-  bottom: 40px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 135%);
   display: flex;
   justify-content: space-between; }
   .pic_box img {
@@ -65,7 +67,6 @@ body {
 .form_box {
   background-color: #fff;
   width: 60%;
-  min-width: 534px;
   margin: 0 auto;
   padding: 30px;
   box-shadow: -3px 10px 20px -5px rgba(0, 0, 0, 0.3); }
@@ -119,7 +120,7 @@ body {
     transform: scale(1); } }
 .main_text img {
   animation: rotate 3s infinite;
-  width: 66%; }
+  width: 64%; }
 
 @keyframes rotate {
   0% {
@@ -188,5 +189,46 @@ button {
 
 button:active, button:hover {
   filter: brightness(1.2); }
+
+.btn_down {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .btn_down button {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 1; }
+
+@media screen and (max-width: 500px) {
+  #invite_card {
+    min-width: unset;
+    width: 100%; }
+    #invite_card .main_text {
+      width: 122%;
+      top: 50%;
+      transform: translate(-50%, -76%); }
+    #invite_card .name {
+      width: 75%;
+      transform: translate(-50%, 540%); }
+    #invite_card .img_card {
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+
+  .pic_box {
+    width: 83%;
+    transform: translate(-50%, 88%); }
+
+  .form_box {
+    width: 80%; }
+
+  button {
+    width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */

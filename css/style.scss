@@ -46,6 +46,12 @@ body{
   img{
     height: 100%;
   }
+  .img_card{
+    
+    max-width: 453px;
+    
+    border-radius: 15px;
+  }
   @include abpos(50%,50%);
   transform: translate(-50%,-50%);
   background-color: $card;
@@ -57,16 +63,17 @@ body{
   min-width: 534px;
   text-align: center;
   border-radius: 15px;
-  overflow: hidden;
   .main_text{
-    @include abpos(50%,39%);
-    transform: translate(-50%,-50%);
-    width: 430px;
+    position: absolute;
+    left: 50%;
+    top: 88px;
+    transform: translateX(-50%);
+    width: 450px;
     height: auto;
   }
   .name{
-    @include abpos(50%,83.6%);
-    transform: translate(-50%,-50%);
+    @include abpos(50%,50%);
+    transform: translate(-50%,540%);
     width: 265px;
     height: auto;
   }
@@ -78,9 +85,9 @@ body{
 .pic_box{
   width: 520px;
   position: absolute;
-  bottom: 40px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%,135%);
   display: flex;
   justify-content: space-between;
   img{
@@ -91,7 +98,6 @@ body{
 .form_box{
   background-color: #fff;
   width: 60%;
-  min-width: 534px;
   margin: 0 auto;
   padding: 30px;
   box-shadow: -3px 10px 20px -5px rgba(0,0,0,.3);
@@ -166,7 +172,7 @@ body{
 
 .main_text img{
   animation: rotate 3s infinite;
-  width: 66%;
+  width: 64%;
 }
 @keyframes rotate {
   0%{
@@ -243,4 +249,55 @@ button{
 }
 button:active, button:hover{
   filter: brightness(1.2);
+}
+.btn_down{
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  button{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 1;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+  #invite_card{
+    min-width: unset;
+    width: 100%;
+    .main_text{
+      width: 122%;
+      top: 50%;
+      transform: translate(-50%,-76%);
+    }
+    .name {
+      width: 75%;
+      transform: translate(-50%,540%);
+    }
+    .img_card{
+      max-width: 100%;
+      height: auto;
+
+      position: absolute;
+      @include abpos(50%,50%);
+      transform: translate(-50%,-50%);
+    }
+  }
+
+  .pic_box{
+    width: 83%;
+    transform: translate(-50%,88%);
+  }
+
+
+  .form_box{
+    width: 80%;
+  }
+  button{
+    width: 80%;
+  }
+  
 }
