@@ -1,0 +1,105 @@
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  
+     <link rel="stylesheet" href="href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/alvarotrigo/fullPage.js/c0019fbc/jquery.fullPage.css">
+
+    
+</head>
+<body>
+
+  <div id="fullpage">
+    <section id="s1" class="div section">
+      <div id="invite_card">
+        <img src="images/card.png" alt="">
+        <div class="main_text"><img src="images/main_text.png" alt=""></div>
+        <div class="name"><img src="images/name.png" alt=""></div>
+        <div class="pic_box">
+          <img src="images/pic1.png" alt="">
+          <img src="images/pic2.png" alt="">
+        </div>
+
+      </div>
+    </section>
+    
+    <section id="s2" class="div section">
+      <div class="form_box">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14448.732169845956!2d121.75077!3d25.1295018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4e388a146db5%3A0xa5e4918553fa96b8!2z5Z-66ZqG5riv5rW355Si5qiT!5e0!3m2!1szh-TW!2stw!4v1702632383477!5m2!1szh-TW!2stw" width="500" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2>誠摯邀請</h2>
+        <h3>為方便安排您的座席，請於1月8日前回覆出席資訊，謝謝！</h3>
+
+        <div id="form">
+            <label>姓名：</label>
+            <input class="input_text" type="text" id="name">
+
+            <p class="qtext">是否能來參加我們的婚宴？</p>
+            <div>
+              <input class="rdobutton_radio" type="radio" id="Y" name="participate">
+              <label for="Y">會出席，共
+                <input class="select" list="num" id="p_num">
+                <datalist id="num">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>                  
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </datalist>
+                位
+              </label>
+              <input class="rdobutton_radio add_left" type="radio" id="N" name="participate">
+              <label for="N">不克出席</label>
+            </div>
+
+            <p class="qtext">是否需為您準備素食？</p>
+            <div>
+              <input class="rdobutton_radio" type="radio" id="vege" name="food">
+              <label for="Y">是，請幫我準備
+                <input class="select" list="num" id="veg_num">
+                <datalist id="num">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>                  
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </datalist>
+                份
+              </label>
+              <input class="rdobutton_radio add_left" type="radio" id="N" name="food">
+              <label for="N">否</label>
+
+            </div>
+
+            
+        </div>
+
+        <div class="btn">
+          <button>送出</button>
+        </div>
+
+        
+        
+      </div>
+    </section>
+  </div>
+
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.js'></script>
+  <script src='https://cdn.rawgit.com/alvarotrigo/fullPage.js/c0019fbc/jquery.fullPage.js'></script>
+  <script src="js/script.js"></script>
+  
+</body>
