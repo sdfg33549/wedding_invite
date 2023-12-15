@@ -43,16 +43,21 @@ body{
   height: 100%;
 }
 #invite_card{
-  img{
-    height: 100%;
-  }
   .img_card{
-    
-    max-width: 453px;
-    
+    position: absolute;
+    @include abpos(50%,50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 453px;    
     border-radius: 15px;
+    max-height: 100%;
   }
   @include abpos(50%,50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-color: $card;
   line-height: 0;
@@ -66,14 +71,21 @@ body{
   .main_text{
     position: absolute;
     left: 50%;
-    top: 88px;
-    transform: translateX(-50%);
-    width: 450px;
+    top: 50%;
+    -webkit-transform: translate(-50%,-75%);
+    -moz-transform: translate(-50%,-75%);
+    -ms-transform: translate(-50%,-75%);
+    transform: translate(-50%,-75%);
+    width: 101%;
+    max-width: 539px;
     height: auto;
   }
   .name{
     @include abpos(50%,50%);
-    transform: translate(-50%,540%);
+    -webkit-transform: translate(-50%,710%);
+    -moz-transform: translate(-50%,710%);
+    -ms-transform: translate(-50%,710%);
+    transform: translate(-50%,710%);
     width: 265px;
     height: auto;
   }
@@ -87,6 +99,9 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%,135%);
+  -moz-transform: translate(-50%,135%);
+  -ms-transform: translate(-50%,135%);
   transform: translate(-50%,135%);
   display: flex;
   justify-content: space-between;
@@ -254,6 +269,9 @@ button:active, button:hover{
   position: relative;
   top: 10px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   button{
     width: 30px;
@@ -270,25 +288,35 @@ button:active, button:hover{
     width: 100%;
     .main_text{
       width: 122%;
-      top: 50%;
+      -webkit-transform: translate(-50%,-76%);
+      -moz-transform: translate(-50%,-76%);
+      -ms-transform: translate(-50%,-76%);
       transform: translate(-50%,-76%);
     }
     .name {
       width: 75%;
+      -webkit-transform: translate(-50%,540%);
+      -moz-transform: translate(-50%,540%);
+      -ms-transform: translate(-50%,540%);
       transform: translate(-50%,540%);
     }
     .img_card{
       max-width: 100%;
       height: auto;
-
       position: absolute;
       @include abpos(50%,50%);
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
       transform: translate(-50%,-50%);
     }
   }
 
   .pic_box{
     width: 83%;
+    -webkit-transform: translate(-50%,88%);
+    -moz-transform: translate(-50%,88%);
+    -ms-transform: translate(-50%,88%);
     transform: translate(-50%,88%);
   }
 
