@@ -38,7 +38,7 @@
             <input class="input_text" type="text" id="name">
 
             <p class="qtext">是否能來參加我們的婚宴？</p>
-            <div>
+            <div id="attend">
               <input class="rdobutton_radio" type="radio" id="Y" name="participate">
               <label for="Y">會出席，共
                 <input class="select" list="num" id="p_num">
@@ -61,8 +61,8 @@
             </div>
 
             <p class="qtext">是否需為您準備素食？</p>
-            <div>
-              <input class="rdobutton_radio" type="radio" id="vege" name="food">
+            <div id="veggie">
+              <input class="rdobutton_radio" type="radio" id="Y" name="food">
               <label for="Y">是，請幫我準備
                 <input class="select" list="num" id="veg_num">
                 <datalist id="num">
@@ -81,16 +81,13 @@
               </label>
               <input class="rdobutton_radio" type="radio" id="N" name="food">
               <label for="N">否</label>
-              <br>
-              <label for="others">備註：</label>
-              <input class="input_text" type="text">
 
             </div>
 
             
         </div>
 
-        <div class="btn">
+        <div class="btn" id="sendBtn">
           <button>送出</button>
         </div>
 
@@ -106,5 +103,70 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.js'></script>
   <script src='https://cdn.rawgit.com/alvarotrigo/fullPage.js/c0019fbc/jquery.fullPage.js'></script>
   <script src="js/script.js"></script>
-  
+  <script>
+    $(document).ready(function() {
+      $.fn.fullpage.moveSectionDown();
+    
+
+    // methods
+    // fullpage_api.moveSectionDown();
+});
+    // $(document).on('click', '#btn_down', function(){
+  // $document.fn.fullpage.moveSectionDown();
+// });
+    console.log("hi");
+    $( "#sendBtn" ).on( "click", function() {
+      console.log("sendBtn hi");
+      
+      // attend
+        var checkedInputId = $("#attend input:checked").attr('id');
+        var labelForValue = $('label[for=' + checkedInputId + ']').attr('for');
+        console.log("Label for attend: " + labelForValue);
+        var pNumValue = $("#p_num").val();
+        if (!pNumValue) {
+          pNumValue =0;
+        }
+        console.log("p_num value: " + pNumValue);
+
+        //veggie
+        var checkedInputIdVeggie = $("#veggie input:checked").attr('id');
+        var labelForValueVeggie = $('label[for=' + checkedInputIdVeggie + ']').attr('for');
+        // var checkedInputIdVeggie = $("#veggie input:checked").attr('id').attr('for');
+        console.log("Label for veggie : " + labelForValueVeggie);
+        var vegNumValue = $("#veg_num").val();
+        if (!vegNumValue) {
+          vegNumValue =0;
+        }
+        console.log("veg_num value: " + vegNumValue);
+        send();
+        // $( "#log" ).html( $( "input:checked" ).val() + " is checked!" );
+    });
+
+
+
+    // let sendButton = document.querySelector('sendBtn');
+
+function send() {
+  let name = "test00001";
+  // let name = document.querySelector('#nameValue').value;
+  // let phone = document.querySelector('#phoneValue').value;
+  // let demand = document.querySelector('#demandValue').value;
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbxNFLOuRHqKMe7Ao_CxBS-wgIi-QcAbhBXe_KcWvaPaOs9DmI-L9Ea2IW2L_N50ZLYe/exec",
+    crossDomain: true,
+    data: {
+        "name": name,
+        // "phone": phone,
+        // "demand": demand
+    },
+    success: function(response) {
+      if(response == "成功"){
+        alert("成功");
+      }
+    },
+  });
+};
+
+// sendButton.addEventListener('click', send);
+    </script>
 </body>
