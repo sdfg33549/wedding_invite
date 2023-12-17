@@ -82,10 +82,10 @@ body{
   }
   .name{
     @include abpos(50%,50%);
-    -webkit-transform: translate(-50%,710%);
-    -moz-transform: translate(-50%,710%);
-    -ms-transform: translate(-50%,710%);
-    transform: translate(-50%,710%);
+    -webkit-transform: translate(-50%,24vh);
+    -moz-transform: translate(-50%,24vh);
+    -ms-transform: translate(-50%,24vh);
+    transform: translate(-50%,24vh);
     width: 265px;
     height: auto;
   }
@@ -127,7 +127,7 @@ body{
     border-top: 1px solid;
     border-bottom: 1px solid;
     padding: 3px 0;
-    margin: 0;
+    margin: 12px 0;
   }
   h3{
     font-size: 15px;
@@ -138,7 +138,6 @@ body{
   #form{
     label, p{
       font-size: 16px;
-      padding: 5px 0;
     }
     input{
       padding: 5px;
@@ -210,6 +209,27 @@ body{
   }
   
 }
+@keyframes move_up_down{
+  0%{
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  50%{
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  100%{
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+
 .rdobutton_radio{
   width: 16px;
   height: 16px;
@@ -266,19 +286,26 @@ button:active, button:hover{
   filter: brightness(1.2);
 }
 .btn_down{
-  position: relative;
-  top: 10px;
+  position: absolute;
   left: 50%;
+  bottom: -50px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   button{
-    width: 30px;
-    height: 30px;
     font-size: 15px;
     line-height: 1;
+    width: auto;
+    padding-left: 30px;
   }
+  button::before{
+      content: "⌵";
+      padding-right: 6px;
+      animation: move_up_down 2s infinite;
+      position: absolute;
+      left: 12px;
+    }
   
 }
 
@@ -294,11 +321,11 @@ button:active, button:hover{
       transform: translate(-50%,-76%);
     }
     .name {
-      width: 75%;
-      -webkit-transform: translate(-50%,540%);
-      -moz-transform: translate(-50%,540%);
-      -ms-transform: translate(-50%,540%);
-      transform: translate(-50%,540%);
+      width: 68%;
+      -webkit-transform: translate(-50%,590%);
+      -moz-transform: translate(-50%,590%);
+      -ms-transform: translate(-50%,590%);
+      transform: translate(-50%,590%);
     }
     .img_card{
       max-width: 100%;
@@ -313,11 +340,14 @@ button:active, button:hover{
   }
 
   .pic_box{
-    width: 83%;
-    -webkit-transform: translate(-50%,88%);
-    -moz-transform: translate(-50%,88%);
-    -ms-transform: translate(-50%,88%);
-    transform: translate(-50%,88%);
+    width: 72%;
+    -webkit-transform: translate(-50%,92%);
+    -moz-transform: translate(-50%,92%);
+    -ms-transform: translate(-50%,92%);
+    transform: translate(-50%,92%);
+    img{
+      width: 30%;
+    }
   }
 
 
